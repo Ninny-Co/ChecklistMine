@@ -11,7 +11,7 @@ import {
 
 import * as React from "react";
 
-import LoginScreen from './Screen/LoginScreen';
+import LoginScreen from '../Screen/LoginScreen';
 
 const Drawer = createDrawerNavigator();
 

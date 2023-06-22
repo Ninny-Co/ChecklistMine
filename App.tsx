@@ -11,13 +11,6 @@ const App = () => {
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
-      <NavigationContainer>
-        {
-          <DrawerStack.Navigator initialRouteName={"Login"}>
-            <DrawerStack.Screen name="Login" component={LoginScreen} />
-          </DrawerStack.Navigator>
-        }
-      </NavigationContainer>
     </View>
   );
 };

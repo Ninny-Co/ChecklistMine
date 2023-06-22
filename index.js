@@ -1,9 +1,31 @@
-import { registerRootComponent } from 'expo';
-import 'react-native-gesture-handler';
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { Navigation } from 'react-navigation';
+import { LoginScreen } from './screen/loginScreen';
 
-import App from './App';
+Navigation.registerComponent('Login', () => LoginScreen);
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+Navigation.events().registerAppLaunchedListener(async () => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [
+          {
+            component: {
+              name: 'Login'
+            }
+          }
+        ]
+      }
+    }
+  });
+});
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'whitesmoke'
+  }
+});

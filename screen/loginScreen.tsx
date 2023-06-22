@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Picker } from "react-native";
 
-const LoginScreen = () => {
+export const LoginScreen = () => {
   const [selectedCompany, setSelectedCompany] = useState("Tronox");
 
   const handleCompanyChange = (itemValue) => {

@@ -1,10 +1,10 @@
-import * as React from "react";
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import React from "react";
 
-type DrawerAppStackParams = {
-    Login: undefined;
-    // MyOrders: undefined;
-  };
-  
-  // Create the Drawer Stack Navigator
-export const DrawerStack = createDrawerNavigator<DrawerAppStackParams>();
+
+export const default [
+  {
+      name:'Profile',
+      iconType:'Material',
+      iconName:'settings'
+  },
+]
